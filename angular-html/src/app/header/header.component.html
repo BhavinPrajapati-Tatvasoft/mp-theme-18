@@ -1,0 +1,213 @@
+<header class="header">
+    <a href="#" title="My Theme" class="tab-logo d-md-none d-block">
+        <img src="./assets/images/logo-primary.svg" alt="My Theme" />
+    </a>
+    <mat-form-field appearance="fill">
+        <input matInput type="search" placeholder="Seacrch ...">
+        <button mat-button class="search-btn">
+            <img src="./assets/images/search-icon.svg" alt="Search" />
+        </button>
+    </mat-form-field>
+    <button mat-button class="menu-toggle" (click)="toggleMenu()">
+        <img src="./assets/images/menu.svg" alt="Menu" class="d-md-none d-block" />
+    </button>
+    <button mat-button class="search-toggle" (click)="toggleSearch()">
+        <img src="./assets/images/search-grey.svg" alt="Search" class="d-md-none d-block" />
+    </button>
+    <button mat-button [matMenuTriggerFor]="notificationMenu" class="primary-button">
+        <img src="./assets/images/notification-icon.svg" alt="Notification" />
+        <span class="badge notification-badge"></span>
+    </button>
+    <mat-menu #notificationMenu="matMenu" xPosition="before" class="primary-dropdown">
+        <p class="notification-title">NOTIFICATIONS</p>
+        <ul class="notification">
+            <li>
+                <a href="#" title="Notification" class="notification-box">
+                    <img src="./assets/images/user-1.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification" class="notification-box">
+                    <img src="./assets/images/user-2.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification" class="notification-box">
+                    <img src="./assets/images/user-3.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification" class="notification-box">
+                    <img src="./assets/images/user-4.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification" class="notification-box">
+                    <img src="./assets/images/user-1.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification" class="notification-box">
+                    <img src="./assets/images/user-2.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification" class="notification-box">
+                    <img src="./assets/images/user-3.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Notification" class="notification-box">
+                    <img src="./assets/images/user-4.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <a href="#" class="show-all" title="Show All">
+            <span>Show All</span>
+            <img src="./assets/images/user-toggle-arrow.svg" alt="Dropdown Arrow">
+        </a>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="messageMenu" class="primary-button">
+        <img src="./assets/images/message-icon.svg" alt="Message" />
+        <span class="badge message-badge"></span>
+    </button>
+    <mat-menu #messageMenu="matMenu" xPosition="before" class="primary-dropdown">
+        <p class="notification-title">MESSAGES</p>
+        <ul class="notification">
+            <li>
+                <a href="#" title="Message" class="notification-box">
+                    <img src="./assets/images/user-1.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Message" class="notification-box">
+                    <img src="./assets/images/user-2.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Message" class="notification-box">
+                    <img src="./assets/images/user-3.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Message" class="notification-box">
+                    <img src="./assets/images/user-4.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Message" class="notification-box">
+                    <img src="./assets/images/user-1.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Message" class="notification-box">
+                    <img src="./assets/images/user-2.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Message" class="notification-box">
+                    <img src="./assets/images/user-3.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Message" class="notification-box">
+                    <img src="./assets/images/user-4.jpg" alt="User">
+                    <div class="notification-content">
+                        <p>Suzzeth Bungaos tagged you and 18 others in a post
+                        </p>
+                        <small>Oct 3, 2017 9:00 PM</small>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <a href="#" class="show-all" title="Show All">
+            <span>Show All</span>
+            <img src="./assets/images/user-toggle-arrow.svg" alt="Dropdown Arrow">
+        </a>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="userMenu" class="user-button">
+        <img src="./assets/images/user-img.jpg" alt="User" class="user-photo img-fluid" />
+        <span>Lia Watson</span>
+        <img src="./assets/images/user-toggle-arrow.svg" alt="User" class="user-toggle" />
+    </button>
+    <mat-menu #userMenu="matMenu" xPosition="before" class="user-menu">
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item>Setting</button>
+        <button mat-menu-item routerLink="/login">Logout</button>
+    </mat-menu>
+</header>

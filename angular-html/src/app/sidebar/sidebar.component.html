@@ -1,0 +1,140 @@
+<aside class="main-navigation">
+    <a href="#" title="My Theme" class="logo">
+        <img src="./assets/images/logo.svg" alt="My Theme" />
+    </a>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#" title="Dashboard" class="nav-link active" routerLink="/dashboard">
+                <img src="./assets/images/dashboard-icon.svg" alt="Dashboard" class="default-icon" />
+                <img src="./assets/images/dashboard-active-icon.svg" alt="Dashboard" class="active-icon" />
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item" [class.open-list]="calendarOpen">
+            <a href="#" title="Calendar" class="nav-link" (click)="toggleCalendar(); $event.preventDefault();">
+                <img src="./assets/images/calendar-icon.svg" alt="Calendar" class="default-icon" />
+                <img src="./assets/images/calendar-active-icon.svg" alt="Calendar" class="active-icon" />
+                <span>Calendar</span>
+                <img src="./assets/images/caret-right.svg" alt="Calendar" class="sidebar-caret" />
+            </a>
+            <ul>
+                <li>
+                    <a href="#" title="Item 1">
+                        Item 1
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 2">
+                        Item 2
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 3">
+                        Item 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item" [class.open-list]="folderOpen">
+            <a href="#" title="Folder" class="nav-link" (click)="toggleFolder(); $event.preventDefault();">
+                <img src="./assets/images/folder-icon.svg" alt="Folder" class="default-icon" />
+                <img src="./assets/images/folder-active-icon.svg" alt="Folder" class="active-icon" />
+                <span>Folder</span>
+                <img src="./assets/images/caret-right.svg" alt="Folder" class="sidebar-caret" />
+            </a>
+            <ul>
+                <li>
+                    <a href="#" title="Item 1">
+                        Item 1
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 2">
+                        Item 2
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 3">
+                        Item 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item" [class.open-list]="analysticsOpen">
+            <a href="#" title="Analytics" class="nav-link" (click)="toggleAnalystics(); $event.preventDefault();">
+                <img src="./assets/images/analystics-icon.svg" alt="Analytics" class="default-icon" />
+                <img src="./assets/images/analystics-active-icon.svg" alt="Analytics" class="active-icon" />
+                <span>Analytics</span>
+                <img src="./assets/images/caret-right.svg" alt="Analytics" class="sidebar-caret" />
+            </a>
+            <ul>
+                <li>
+                    <a href="#" title="Item 1">
+                        Item 1
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 2">
+                        Item 2
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 3">
+                        Item 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item" [class.open-list]="pagesOpen">
+            <a href="#" title="Pages" class="nav-link" (click)="togglePages(); $event.preventDefault();">
+                <img src="./assets/images/pages-icon.svg" alt="Pages" class="default-icon" />
+                <img src="./assets/images/pages-active-icon.svg" alt="Pages" class="active-icon" />
+                <span>Pages</span>
+                <img src="./assets/images/caret-right.svg" alt="Pages" class="sidebar-caret" />
+            </a>
+            <ul>
+                <li>
+                    <a href="#" title="Innerpage" routerLink="/innerpage">
+                        Innerpage
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 2">
+                        Item 2
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 3">
+                        Item 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item" [class.open-list]="mailboxOpen">
+            <a href="#" title="Mailbox" class="nav-link" (click)="toggleMailbox(); $event.preventDefault();">
+                <img src="./assets/images/mailbox-icon.svg" alt="Mailbox" class="default-icon" />
+                <img src="./assets/images/mailbox-active-icon.svg" alt="Mailbox" class="active-icon" />
+                <span>Mailbox</span>
+                <img src="./assets/images/caret-right.svg" alt="Mailbox" class="sidebar-caret" />
+            </a>
+            <ul>
+                <li>
+                    <a href="#" title="Item 1">
+                        Item 1
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 2">
+                        Item 2
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Item 3">
+                        Item 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</aside>
+<div class="overlay" (click)="hideMenu()"></div>

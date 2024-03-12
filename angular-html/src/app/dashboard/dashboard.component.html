@@ -1,0 +1,88 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+    <app-header></app-header>
+    <div class="main-wrapper">
+        <div class="page-heading">
+            <img src="./assets/images/dashboard-title-icon.svg" alt="Dashboard">
+            <h5>Dashboard</h5>
+        </div>
+        <div class="row small-gutter">
+            <div class="col-lg-3 col-md-6">
+                <div class="statistics purple-card">
+                    <img src="./assets/images/laptop-icon.svg" alt="Laptop" class="icons">
+                    <span>Laptop</span>
+                    <p>15329</p>
+                    <img src="./assets/images/statistic-circle.svg" alt="Laptop" class="circle circle-1">
+                    <img src="./assets/images/statistic-circle.svg" alt="Laptop" class="circle circle-2">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="statistics blue-card">
+                    <img src="./assets/images/desktop-icon.svg" alt="Desktop" class="icons">
+                    <span>Desktop</span>
+                    <p>5692</p>
+                    <img src="./assets/images/statistic-circle.svg" alt="Desktop" class="circle circle-1">
+                    <img src="./assets/images/statistic-circle.svg" alt="Desktop" class="circle circle-2">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="statistics orange-card">
+                    <img src="./assets/images/android-icon.svg" alt="Android" class="icons">
+                    <span>Android</span>
+                    <p>2598</p>
+                    <img src="./assets/images/statistic-circle.svg" alt="Android" class="circle circle-1">
+                    <img src="./assets/images/statistic-circle.svg" alt="Android" class="circle circle-2">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="statistics green-card">
+                    <img src="./assets/images/iphone-icon.svg" alt="Android" class="icons">
+                    <span>iPhone</span>
+                    <p>6981</p>
+                    <img src="./assets/images/statistic-circle.svg" alt="Android" class="circle circle-1">
+                    <img src="./assets/images/statistic-circle.svg" alt="Android" class="circle circle-2">
+                </div>
+            </div>
+        </div>
+        <div class="white-card table-wrapper">
+            <h6>Table Data</h6>
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="task">
+                        <th mat-header-cell *matHeaderCellDef> Task </th>
+                        <td mat-cell *matCellDef="let element"> {{element.task}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="userType">
+                        <th mat-header-cell *matHeaderCellDef> User Type </th>
+                        <td mat-cell *matCellDef="let element"> {{element.userType}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef class="text-center"> Status </th>
+                        <td mat-cell *matCellDef="let element" [innerHtml]="element.status" class="text-center"> </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef class="text-center"> Actions </th>
+                        <td mat-cell *matCellDef="let element" [innerHtml]="element.actions"
+                            class="actions text-center">
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" [length]="100" [pageSize]="5" showFirstLastButtons>
+            </mat-paginator>
+
+        </div>
+    </div>
+</div>
